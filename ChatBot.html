@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat app</title>
+</head>
+<body>
+    <div class="flex flex-col items-center bg-background min-h-screen p-6">
+        <header class="w-full flex justify-between items-center bg-primary p-4 rounded-lg shadow-lg">
+          <div class="flex items-center">
+            <button class="text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
+              <img src="https://openui.fly.dev/openui/24x24.svg?text=☰" alt="Menu" class="w-6 h-6" />
+            </button>
+            <span class="text-white ml-4 font-semibold text-lg">Chat App</span>
+          </div>
+          <input type="text" placeholder="Search..." class="bg-input text-primary p-2 rounded-lg w-1/2 focus:outline-none focus:ring-2 focus:ring-secondary transition duration-300" />
+        </header>
+      
+        <div class="flex flex-col w-full mt-6 space-y-4">
+          <div class="bg-card p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center">
+              <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User" class="w-10 h-10 rounded-full border-2 border-primary" />
+              <span class="ml-4 text-primary-foreground font-semibold">User 1</span>
+            </div>
+            <p class="text-muted-foreground mt-2">This is a message from User 1.</p>
+            <div class="flex justify-end mt-3">
+              <button class="text-secondary hover:text-secondary-dark transition-colors duration-300 focus:outline-none">Reply</button>
+            </div>
+          </div>
+      
+          <div class="bg-card p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center">
+              <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User" class="w-10 h-10 rounded-full border-2 border-primary" />
+              <span class="ml-4 text-primary-foreground font-semibold">User 2</span>
+            </div>
+            <p class="text-muted-foreground mt-2">This is a message from User 2.</p>
+            <div class="flex justify-end mt-3">
+              <button class="text-secondary hover:text-secondary-dark transition-colors duration-300 focus:outline-none">Reply</button>
+            </div>
+          </div>
+      
+          <div class="bg-card p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center">
+              <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User" class="w-10 h-10 rounded-full border-2 border-primary" />
+              <span class="ml-4 text-primary-foreground font-semibold">User 3</span>
+            </div>
+            <p class="text-muted-foreground mt-2">This is a message from User 3.</p>
+            <div class="flex justify-end mt-3">
+              <button class="text-secondary hover:text-secondary-dark transition-colors duration-300 focus:outline-none">Reply</button>
+            </div>
+          </div>
+        </div>
+      
+        <footer class="w-full bg-primary p-4 rounded-lg mt-6 shadow-lg">
+          <div class="flex justify-between items-center">
+            <button class="text-white bg-secondary hover:bg-secondary-dark p-2 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">Send</button>
+            <input type="text" placeholder="Type a message..." class="bg-input text-primary p-2 rounded-lg w-3/4 focus:outline-none focus:ring-2 focus:ring-secondary transition duration-300" />
+          </div>
+        </footer>
+      </div>
+      
+      <script>
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Message sent!');
+        });
+      </script>
+      
+      <style>
+        body {
+          font-family: 'Poppins', sans-serif;
+          background-color: #f9fafb;
+          color: #333;
+        }
+      
+        .bg-background {
+          --background: #f0f4f8;
+          background-color: var(--background);
+        }
+      
+        .bg-primary {
+          --primary: #91fa71;
+          background-color: var(--primary);
+        }
+      
+        .text-primary-foreground {
+          --primary-foreground: #2c3e50;
+          color: var(--primary-foreground);
+        }
+      
+        .bg-input {
+          --input-bg: #ecf0f1;
+          background-color: var(--input-bg);
+        }
+      
+        .text-muted-foreground {
+          --muted-foreground: #020707;
+          color: var(--muted-foreground);
+        }
+      
+        .bg-card {
+          --card-bg: #ffffff;
+          background-color: var(--card-bg);
+        }
+      
+        .text-secondary {
+          --secondary: #000000;
+          color: var(--secondary);
+        }
+      
+        .hover\:text-secondary-dark:hover {
+          --secondary-dark: #f36744;
+          color: var(--secondary-dark);
+        }
+      
+        .shadow-lg {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+      
+        .hover\:shadow-2xl:hover {
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+      
+        .rounded-lg {
+          border-radius: 0.5rem;
+        }
+      </style>
+</body>
+</html>

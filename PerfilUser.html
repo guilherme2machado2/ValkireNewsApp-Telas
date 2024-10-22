@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa e Perfil usuário</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        .bg-background {
+            --background: #f5f5f5;
+        }
+    
+        .text-primary {
+            --primary: #333;
+        }
+    
+        .bg-input {
+            --input-bg: #e0e0e0;
+            background-color: var(--input-bg);
+        }
+    
+        .bg-secondary {
+            --secondary: #007bff;
+            background-color: var(--secondary);
+        }
+    
+        .text-secondary-foreground {
+            --secondary-foreground: white;
+            color: var(--secondary-foreground);
+        }
+    
+        .bg-destructive {
+            --destructive: #dc3545;
+            background-color: var(--destructive);
+        }
+    
+        .text-destructive-foreground {
+            --destructive-foreground: white;
+            color: var(--destructive-foreground);
+        }
+    
+        .hover\:bg-secondary-dark:hover {
+            --secondary-dark: #0056b3;
+            background-color: var(--secondary-dark);
+        }
+    
+        .hover\:bg-destructive-dark:hover {
+            --destructive-dark: #c82333;
+            background-color: var(--destructive-dark);
+        }
+    
+        .shadow-lg {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+    </style>
+    <div class="flex flex-col bg-background p-6 w-full h-full max-w-md mx-auto shadow-lg rounded-lg border border-gray-300">
+        <div class="flex items-center mb-6">
+          <img aria-hidden="true" alt="User Avatar" src="https://openui.fly.dev/openui/24x24.svg?text=👤" class="w-12 h-12 rounded-full border-2 border-primary" />
+          <span class="ml-4 text-xl font-semibold text-primary">Username</span>
+        </div>
+        <input type="text" placeholder="Search..." class="bg-input text-primary p-3 rounded-lg mb-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+        <button class="bg-secondary text-secondary-foreground p-3 rounded-lg mb-3 hover:bg-secondary-dark transition ease-in-out duration-300">Perfil</button>
+        <button class="bg-secondary text-secondary-foreground p-3 rounded-lg mb-3 hover:bg-secondary-dark transition ease-in-out duration-300">Notificações</button>
+        <button class="bg-secondary text-secondary-foreground p-3 rounded-lg mb-3 hover:bg-secondary-dark transition ease-in-out duration-300">Configurações</button>
+        <button class="bg-destructive text-destructive-foreground p-3 rounded-lg hover:bg-destructive-dark transition ease-in-out duration-300">Logout</button>
+    </div>
+    
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert(`${button.textContent} clicked!`);
+            });
+        });
+    </script>
+</body>
+</html>
