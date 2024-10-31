@@ -1,158 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalização de Experiência</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 375px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header {
-            background-color: #ffcc00;
-            padding: 10px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header img {
-            width: 24px;
-            height: 24px;
-        }
-
-        h1 {
-            font-size: 18px;
-            margin: 20px 0;
-            color: #333;
-        }
-
-        .category {
-            margin: 20px 0;
-        }
-
-        .category h2 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .category-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .category-buttons button {
-            border: 2px solid #333;
-            border-radius: 20px;
-            padding: 10px 15px;
-            font-size: 14px;
-            background-color: #fff;
-            color: #333;
-            cursor: pointer;
-        }
-
-        .category-buttons button:hover {
-            background-color: #ffcc00;
-            color: #fff;
-            border-color: #ffcc00;
-        }
-
-        footer {
-            background-color: #ffcc00;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        footer p {
-            font-size: 12px;
-        }
-
-        footer a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/ValkireNewsApp-Telas/CSS/PagPersonalizacao.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <img src="https://openui.fly.dev/openui/24x24.svg?text=☰" alt="Menu">
-            <img src="https://openui.fly.dev/openui/24x24.svg?text=🔍" alt="Search">
-        </header>
-
-        <h1>Personalize sua Experiência!</h1>
-
-        <div class="category">
-            <h2>Negócios e Finanças</h2>
-            <div class="category-buttons">
-                <button>Inovação</button>
-                <button>Bolsa de Valores</button>
-                <button>Investimentos</button>
-                <button>Tendências de Mercado</button>
+    <header>
+        <div class="open-btn" onclick="toggleSidebar()"><img
+                src="/ValkireNewsApp-Telas/icons/menu_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="menu lateral">
+        </div>
+        <div class="acessibility-btn"><img
+                src="/ValkireNewsApp-Telas/icons/settings_accessibility_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png"
+                alt="acessibilidade"></div>
+        <div id="mySidebar" class="menuLateral">
+            <a href="#">Podcast <img
+                    src="/ValkireNewsApp-Telas/icons/headphones_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png"
+                    alt="Podcast"></a>
+            <a href="#">Minhas Noticias <img
+                    src="/ValkireNewsApp-Telas/icons/bookmark_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png"
+                    alt="Noticias Salvas"> </a>
+            <a href="#">Configurações <img
+                    src="/ValkireNewsApp-Telas/icons/settings_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt=""></a>
+            <a href="#">Encerrar sessão <img
+                    src="/ValkireNewsApp-Telas/icons/exit_to_app_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png"
+                    alt="encerrar sessão"></a>
+        </div>
+        <div class="search-container">
+            <form action="/buscar" method="get">
+                <button type="submit"><img
+                        src="/ValkireNewsApp-Telas/icons/search_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png"
+                        alt="lupa"></button>
+                <input type="text" name="pesquisa" placeholder="Pesquisar..." required>
+            </form>
+        </div>
+    </header>
+    <main>
+      <h1>Personalize sua Experiência!</h1>
+        <div class="container">
+            <div class="carousel">
+                <div class="card-group">
+                    <h2>Negócios e Finanças</h2>
+                    <div class="category-buttons">
+                        <button>Inovação</button>
+                        <button>Bolsa de Valores</button>
+                        <button>Investimentos</button>
+                        <button>Tendências de Mercado</button>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <h2>Notícias da Atualidade</h2>
+                    <div class="category-buttons">
+                        <button>Ciência</button>
+                        <button>Tecnologia</button>
+                        <button>Saúde</button>
+                        <button>Política</button>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <h2>Cultura e Entretenimento</h2>
+                    <div class="category-buttons">
+                        <button>Artes</button>
+                        <button>Filmes</button>
+                        <button>Séries</button>
+                        <button>Música</button>
+                    </div>
+                </div>
+            </div>
+            <button class="prev">Anterior</button>
+            <button class="next">Próximo</button>
+        </div>    
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre nós</h3>
+                <p>texto.......</p>
+                <a href="#">Saiba Mais!</a>
+            </div>
+            <div class="footer-section2">
+                <h3>Links Uteis!</h3>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Documentação</a>
+                <a href="#">Public Key</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="/ValkireNewsApp-Telas/icons/linkedin.png" alt="linkedin"></a>
+                    <a href="#"><img src="/ValkireNewsApp-Telas/icons/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="/ValkireNewsApp-Telas/icons/github.png" alt="github"></a>
+                </div>
             </div>
         </div>
-
-        <div class="category">
-            <h2>Notícias da Atualidade</h2>
-            <div class="category-buttons">
-                <button>Ciência</button>
-                <button>Tecnologia</button>
-                <button>Saúde</button>
-                <button>Política</button>
-            </div>
         </div>
+        <p>&copy; 2024 ValkireNews. Todos direitos reservados.</p>
+    </footer>
 
-        <div class="category">
-            <h2>Cultura e Entretenimento</h2>
-            <div class="category-buttons">
-                <button>Artes</button>
-                <button>Filmes</button>
-                <button>Séries</button>
-                <button>Música</button>
-            </div>
-        </div>
 
-        <footer>
-            <p>
-                <a href="#">Termos de Uso</a> | 
-                <a href="#">Política de Privacidade</a>
-            </p>
-            <p>&copy; 2024 - Todos os direitos reservados</p>
-        </footer>
-    </div>
-
-    <script>
-        document.querySelectorAll('.category-buttons button').forEach(button => {
-            button.addEventListener('click', () => {
-                alert(`Você escolheu ${button.textContent}`);
-            });
-        });
-    </script>
+    <script src="/ValkireNewsApp-Telas/JS/PersonalizacaoPag.js"> </script>
 </body>
+
 </html>
