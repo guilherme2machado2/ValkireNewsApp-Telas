@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Bem Vindo!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ValkireNewsApp-Telas/CSS/welcomePag.css">
+</head>
+<body>
+
+    <header>
+        <div class="open-btn" onclick="toggleSidebar()"><img src="/ValkireNewsApp-Telas/icons/menu_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="menu lateral"></div>
+        <div class="acessibility-btn"><img src="/ValkireNewsApp-Telas/icons/settings_accessibility_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="acessibilidade"></div>
+        <div id="mySidebar" class="menuLateral">
+            <a href="#">Podcast <img src="/ValkireNewsApp-Telas/icons/headphones_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="Podcast"></a>
+            <a href="#">Minhas Noticias <img src="/ValkireNewsApp-Telas/icons/bookmark_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="Noticias Salvas"> </a>
+            <a href="#">Configurações <img src="/ValkireNewsApp-Telas/icons/settings_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt=""></a>
+            <a href="#">Encerrar sessão <img src="/ValkireNewsApp-Telas/icons/exit_to_app_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="encerrar sessão"></a>
+        </div>
+        <div class="search-container">
+            <form action="/buscar" method="get">
+                <button type="submit"><img src="/ValkireNewsApp-Telas/icons/search_16dp_00000_FILL0_wght300_GRAD-25_opsz20.png" alt="lupa"></button>
+                <input type="text" name="pesquisa" placeholder="Pesquisar..." required>
+            </form>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+
+        <div class="container-welcome">
+            <h1>Seja Bem Vindo!</h1>
+            <p>
+                Descubra uma nova forma de se manter informado com nosso app inovador de agregação de notícias, 
+                projetado para oferecer uma experiência única e personalizada. 
+            </p>
+        </div>
+        <div class="info-box">
+            <h5>Agregação de Noticias</h5>
+            <p>
+                Coletamos notícias de diversas fontes confiáveis e as apresentamos de forma clara e organizada,
+                para que você possa acessar as informações mais relevantes em um só lugar.
+            </p>
+        </div>
+        <div class="info-box">
+            <h5>Resumos via IA</h5>
+            <p>
+                Utilizando inteligência artificial, nosso app gera resumos concisos das notícias, 
+                permitindo que você se atualize rapidamente sobre os principais acontecimentos sem perder tempo.
+            </p>
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre nós</h3>
+                <p>texto.......</p>
+                <a href="#">Saiba Mais!</a>
+            </div>
+            <div class="footer-section2">
+                <h3>Links Uteis!</h3>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Documentação</a>
+                <a href="#">Public Key</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="/ValkireNewsApp-Telas/icons/linkedin.png" alt="linkedin"></a>
+                    <a href="#"><img src="/ValkireNewsApp-Telas/icons/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="/ValkireNewsApp-Telas/icons/github.png" alt="github"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 ValkireNews. Todos direitos reservados.</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/ValkireNewsApp-Telas/JS/WelcomePag.js"> </script>
+</body>
+</html>
