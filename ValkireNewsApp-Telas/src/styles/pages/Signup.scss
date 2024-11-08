@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+
+  .top-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .input-forms,
+  .signup-inputs,
+  .input-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  input {
+    padding: 25px 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+  }
+
+  .input-buttons {
+    width: 100%;
+
+    button {
+      padding: 15px;
+      width: 100%;
+      background-color: #ffc500;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #e3af00;
+    }
+  }
+
+  .media-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+
+    button {
+      position: relative;
+      padding: 15px;
+      width: 100%;
+      background-color: #fff;
+      color: black;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      img {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+      }
+    }
+  }
+}
